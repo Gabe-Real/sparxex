@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sparx Extensions Hub</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+<!-- App Selection Menu -->
+<div id="app-menu">
+  <div class="app-icon" data-app="sparxreader">
+    <img src="../icons/sparxreader.jpeg" alt="Sparx Reader"/>
+    <div>Sparx Reader</div>
+  </div>
+  <div class="app-icon" data-app="sparxmaths">
+    <img src="../icons/sparxmaths.jpg" alt="Sparx Maths"/>
+    <div>Sparx Maths</div>
+  </div>
+  <!-- Add more apps here -->
+</div>
+
+<!-- App Content Areas -->
+<div id="app-content">
+  <!-- Each app content is a view, shown/hidden with JavaScript -->
+  <div class="app-view" id="view-sparxreader">
+    <textarea id="ocr-output" rows="10" cols="40" placeholder="Paste your text or use OCR extension..."></textarea>
+    <br>
+    <input type="text" id="question" placeholder="Ask a question about the copied text"/>
+    <button id="ask-ai">Ask AI</button>
+    <p id="answer"></p>
+  </div>
+  <div class="app-view" id="view-sparxmaths" style="display:none">
+    <p>Sparx Maths tools coming soon!</p>
+  </div>
+  <!-- Add more app views here -->
+</div>
+
+<script src="../javascript/popup.js"></script>
+</body>
+</html>

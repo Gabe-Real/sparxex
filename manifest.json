@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Sparxex",
+  "version": "1.0",
+  "description": "Select part of a webpage, extract text with OCR, and get AI answers.",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_icon": "icon.jpeg",
+    "default_popup": "src/main/sparxex/dev/gabereal/extensions/html/popup.html"
+  },
+  "icons": {
+    "128": "icon.jpeg"
+  },
+  "background": {
+    "service_worker": "src/main/sparxex/dev/gabereal/extensions/javascript/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/main/sparxex/dev/gabereal/extensions/javascript/content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["node_modules/tesseract.js/*", "node_modules/tesseract.js-core/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
