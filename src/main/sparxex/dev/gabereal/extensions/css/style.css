@@ -1,12 +1,12 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0 0; /* or whatever looks good for your content */
+  padding: 0 0;
   width: 300px;
   background: #23272e;
   color: #e7e9ea;
-  border-radius: 18px;    /* << Rounded corners */
-  overflow: hidden;       /* << Key for clipping content at body border */
+  border-radius: 18px;
+  overflow: hidden;
   box-shadow: 0 8px 36px #222a;
   display: flex;
   flex-direction: column;
